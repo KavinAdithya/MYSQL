@@ -62,3 +62,7 @@ member_id VARCHAR(20) PRIMARY KEY,
 name VARCHAR(15),
 age INT,
 parent_id VARCHAR(2));
+SELECT family.name AS child_name,family.name AS parent_name FROM family AS child JOIN family AS parent ON child.parent_id=parent.member_id;
+SELECT * FROM employee WHERE employee.emp_id IN (SELECT mgr_id FROM branch);
+CREATE TABLE filterTable(name VARCHAR(30),
+ID INT PRIMARY KEY);
