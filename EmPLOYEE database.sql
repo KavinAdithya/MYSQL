@@ -20,3 +20,6 @@ ALTER TABLE employee DROP PRIMARY KEY;
 SELECT CONSTRAINT_NAME FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE quantity_in_stock
 WHERE TABLE_NAME='employee'AND COLUMN_NAME='department_id';
 ALTER TABLE employee DROP COLUMN department_id;
+CREATE DATABASE hibernate;
+USE hibernate;
+SELECT * FROM student;
