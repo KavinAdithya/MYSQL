@@ -27,3 +27,17 @@ ALTER TABLE computer ADD COLUMN age INT CHECK(age > 18);
 alter table computer MODIFY serial_no INT AUTO_INCREMENT;
 DESCRIBE computer;
 ALTER TABLE computer MODIFY keyboarD INT DEFAULT 2;
+CREATE TABLE string_primary(
+email VARCHAR(12) ,
+age INT, 
+gmail VARCHAR(23),
+PRIMARY KEY(email,age,gmail)
+);
+INSERT INTO string_primary VALUES('KAVIN',19,'9901');
+USE employee;
+SHOW TABLES;
+SELECT * FROM department;
+SELECT * FROM department ORDER BY  name_of_department DESC;
+SELECT * FROM department 
+WHERE depart_ID != 5 AND name_of_department = 'CSE' || name_of_department = 'IT' AND depart_ID != 2
+ORDER BY  depart_ID ASC;
